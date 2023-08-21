@@ -1,0 +1,33 @@
+.Button {
+  border: "none";
+  border-radius: "50%";
+  font-size: "8px";
+  color: "#fff";
+  cursor: "pointer";
+  &:hover {
+    background-color: #dc82fc;
+  }
+}
+
+.WhiteButton {
+  background-color: white;
+  border: 1px solid #1179fc;
+  color: #1179fc;
+}
+.BlueButton {
+  background-color: #1179fc;
+  color: #fff;
+}
+.GrayButton {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.LargeButton {
+  height: 40px;
+  font-size: 18px;
+}
+.SmallButton {
+  height: 16px;
+  font-size: 10px;
+}
