@@ -1,0 +1,21 @@
+@mixin gradient-text {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #1179fc 25%, #dc82fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@mixin container {
+  margin: 20rem;
+}
+
+@mixin gradient-line {
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    /* Fade at the start */ gray 50%,
+    /* Start color */ gray 50%,
+    /* End color */ transparent 100% /* Fade at the end */
+  );
+}
