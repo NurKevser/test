@@ -1,21 +1,21 @@
 import React from "react";
-// import style from "../styles/landingPage/landingPage.module.scss";
+import style from "../styles/landingPage.module.scss";
 import Layout from "../components/common/Layout";
 import HeroSection from "../landingPage/HeroSection";
-// import About from "../components/LandingPage/About";
-// import Works from "../components/LandingPage/Works";
-// import Services from "../components/LandingPage/Services";
-// import Contact from "../components/LandingPage/Contact";
+import SliderCard from "../components/cards/SliderCard";
+import Accordion from "../components/common/Accordion/Accordion";
+import Analitycs1 from "../landingPage/Analitycs1";
+import Analitycs2 from "../landingPage/Analitycs2";
 
 const LandingPage = () => {
   return (
     <Layout>
-      <div>
+      <div className={style.Container}>
         <HeroSection />
-        {/* <About />
-        <Services />
-        <Works />
-        <Contact /> */}
+        {/* <SliderCard /> */}
+        <Analitycs1 />
+        <Analitycs2 />
+        <Accordion />
       </div>
     </Layout>
   );

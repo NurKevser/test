@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AccordionItem from "./AccordionItem";
+import style from "../../../styles/accordion.module.scss";
 
 const Accordion = () => {
   const [clicked, setClicked] = useState("0");
@@ -9,6 +10,7 @@ const Accordion = () => {
       return setClicked("0");
     }
     setClicked(index);
+    console.log("active");
   };
 
   const features = [

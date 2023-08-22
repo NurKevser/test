@@ -1,9 +1,20 @@
 .Button {
-  border: "none";
-  border-radius: "50%";
-  font-size: "8px";
-  color: "#fff";
-  cursor: "pointer";
+  border: none;
+  border-radius: 40px;
+  font-size: 8px;
+  font-family: Geliat, Arial, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+  line-height: 40px;
+  transition: background-color 0.2s;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     background-color: #dc82fc;
   }
@@ -13,19 +24,25 @@
   background-color: white;
   border: 1px solid #1179fc;
   color: #1179fc;
+  padding: 5px 28px;
+  &:hover {
+    color: white;
+  }
 }
 .BlueButton {
   background-color: #1179fc;
   color: #fff;
+  padding: 5px 28px;
 }
 .GrayButton {
   background-color: rgba(255, 255, 255, 0.25);
   color: #fff;
+  padding: 3px 24px;
 }
 
 .LargeButton {
   height: 40px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .SmallButton {
   height: 16px;

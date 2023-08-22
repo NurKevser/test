@@ -1,0 +1,99 @@
+@import "mixins.scss";
+
+.Item {
+  background-color: white;
+  margin: 2rem 0;
+  border-radius: 20px;
+  padding: 2rem;
+  .Title {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 3rem;
+
+    & > h4 {
+      color: #0f0f0f;
+      letter-spacing: -1px;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.16;
+      width: 80%;
+      span {
+        color: rgba(15, 15, 15, 0.65);
+      }
+    }
+    .Icon {
+      border-radius: 50%;
+      padding: 8px;
+      background-color: #f6f8fb;
+      cursor: pointer;
+    }
+    .IconOpen {
+      border-radius: 50%;
+      padding: 8px;
+      background-color: #f6f8fb;
+      cursor: pointer;
+      transition: transform ease 0.2s;
+      transform: rotate(180deg);
+    }
+  }
+  .ContentWrapper {
+    transition: transform ease 0.2s;
+    height: 0;
+    overflow: hidden;
+
+    .Line {
+      @include gradient-line;
+    }
+    .Content {
+      display: flex;
+      padding: 1rem;
+
+      .Text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 3rem;
+        margin-right: 2rem;
+      }
+    }
+
+    img {
+      width: 500px;
+      height: 420px;
+    }
+  }
+  .ContentWrapperOpen {
+    transition: transform ease 0.2s;
+    height: auto;
+    overflow: hidden;
+
+    .Line {
+      @include gradient-line;
+    }
+    .Content {
+      transition: transform ease 0.2s;
+      display: flex;
+      padding: 1rem;
+
+      .Text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 3rem;
+        margin-right: 2rem;
+      }
+    }
+
+    img {
+      width: 500px;
+      height: 420px;
+    }
+  }
+}

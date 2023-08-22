@@ -1,20 +1,40 @@
 import Angle from "../../../assets/angle.svg";
+import accPic from "../../../assets/accordionPic.png";
+import style from "../../../styles/accordionItem.module.scss";
+import Button from "../Button";
 
-const AccordionItem = ({ feature, onToggle, active }) => {
-  const { title1, title2, content } = feature;
+const AccordionItem = ({ data, onToggle, active }) => {
+  const { title1, title2, content } = data;
+  console.log("active Item", active);
   return (
-    <li className={`${style.Item} ${active ? style.Active : ""}`}>
+    <li className={`${style.Item}`}>
       <button className={style.Title} onClick={onToggle}>
-        <span>{title1}</span>
-        {title2}
-        <span className={style.Icon}>
-          <img src={Angle} alt="accordion icon" />
-        </span>
+        <h4>
+          <span>{title1}</span>
+          {title2}
+        </h4>
+        <img
+          src={Angle}
+          alt="accordion icon"
+          className={`${style.Icon} ${active ? style.IconOpen : ""}`}
+        />
       </button>
-      <div className={`${style.ContentWrapper} ${active ? style.Open : ""}`}>
+      <div
+        className={`${style.ContentWrapper} ${
+          active ? style.ContentWrapperOpen : ""
+        }`}
+      >
         <div className={style.Line}></div>
-        <div className={style.Content}>{content}</div>
-        <img src="../../../assets/accordionPic.png" alt="accordion picture" />
+        <div className={style.Content}>
+          <div>
+            <div className={style.Text}>{content}</div>
+            <Button variant="blue" size="lg">
+              START FOR FREE
+            </Button>
+          </div>
+
+          <img src={accPic} alt="accordion picture" />
+        </div>
       </div>
     </li>
   );

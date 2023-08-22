@@ -1,16 +1,13 @@
-import { useState } from "react";
+import style from "../../styles/Button.module.scss";
 
 function Button(props) {
-  const [size] = useState(props.size);
-  const [variant] = useState(props.variant);
-
   return (
     <button
       type={props.type}
       onClick={props?.onClick}
       className={`${style.Button} ${
         (props?.variant === "white" && style.WhiteButton) ||
-        (props?.variant === "blue" && style.GrayButton) ||
+        (props?.variant === "gray" && style.GrayButton) ||
         (props?.variant === "blue" && style.BlueButton)
       }  ${
         (props.size === "lg" && style.LargeButton) ||

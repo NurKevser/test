@@ -1,0 +1,72 @@
+@import "mixins.scss";
+.Container {
+  margin: 5rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 3rem;
+  .Card1 {
+    display: flex;
+    .Image {
+      width: 540px;
+      height: 520px;
+    }
+    .Content {
+      padding: 1rem 3rem;
+      & > div {
+        margin-bottom: 24px;
+        font-size: 3.2rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        & span {
+          @include gradient-text;
+        }
+      }
+      img {
+        border-radius: 50%;
+        padding: 8px;
+        background-color: #f6f8fb;
+        margin-top: 2rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .Card2 {
+    display: flex;
+    .Image {
+      width: 590px;
+      height: 520px;
+    }
+    .Content {
+      padding: 1rem 3rem;
+      & > div {
+        margin-bottom: 24px;
+        font-size: 3.2rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        & span {
+          @include gradient-text;
+        }
+      }
+      img {
+        border-radius: 50%;
+        padding: 8px;
+        background-color: #f6f8fb;
+        margin-top: 2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .Container {
+    .Card1 {
+      flex-direction: column-reverse;
+    }
+    .Card2 {
+      flex-direction: column;
+    }
+  }
+}
